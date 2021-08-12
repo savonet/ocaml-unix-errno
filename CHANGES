@@ -1,3 +1,6 @@
+0.6.0 (2021-08-19):
+* Port to dune
+
 0.5.2 (2017-01-20):
 * Install cmx files
 
