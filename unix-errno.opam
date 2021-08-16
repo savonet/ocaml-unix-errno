@@ -9,12 +9,12 @@ representing Errno.Host.t values will also be built. With ctypes and
 Unix, you'll also receive the errno-map tool for outputting the current
 host's errno map and the Errno_unix module containing an errno global
 variable checking function and Unix.error type converters."""
-maintainer: "sheets@alum.mit.edu"
-authors: "David Sheets"
+maintainer: "Xapi Project"
+authors: "David Sheets <sheets@alum.mit.edu>"
 license: "ISC"
 tags: ["errno" "errno.h" "errors" "unix" "syscall"]
-homepage: "https://github.com/dsheets/ocaml-unix-errno"
-bug-reports: "https://github.com/dsheets/ocaml-unix-errno/issues"
+homepage: "https://github.com/xapi-project/ocaml-unix-errno"
+bug-reports: "https://github.com/xapi-project/ocaml-unix-errno/issues"
 depends: [
   "ocaml" {>= "4.01.0"}
   "dune" {>= "2.0"}
@@ -32,4 +32,4 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "build" "-p" name "-j" jobs "@runtest"] {with-test}
 ]
-dev-repo: "git+https://github.com/dsheets/ocaml-unix-errno.git"
+dev-repo: "git+https://github.com/xapi-project/ocaml-unix-errno.git"
