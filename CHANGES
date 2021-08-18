@@ -1,19 +1,22 @@
-0.5.2 (2017-01-20):
+## 0.6.0 (2021-08-19):
+* Port to dune
+
+## 0.5.2 (2017-01-20):
 * Install cmx files
 
-0.5.1 (2016-08-05):
+## 0.5.1 (2016-08-05):
 * Add a missing ctypes findlib dependency.
 
-0.5.0 (2016-07-26):
+## 0.5.0 (2016-07-26):
 * Switch errno from int to Ctypes.sint
 
-0.4.2 (2016-06-01):
+## 0.4.2 (2016-06-01):
 * Add support for ctypes 0.6.0
 
-0.4.1 (2016-05-04):
+## 0.4.1 (2016-05-04):
 * Fix linking of Errno_host
 
-0.4.0 (2016-05-01):
+## 0.4.0 (2016-05-01):
 * Remove Errno_host.Linux.v4_0_5 and Errno_host.OSX.v10_11_1
 * Add Errno_host.Linux.v4_4_6 and Errno_host.OSX.v10_11_4
 * Changed the return type of Errno_unix.raise_on_errno to be 'a option
@@ -43,7 +46,7 @@
   available on OS X and FreeBSD
 * Add ENOSTR, ENODATA, ETIME, and ENOSR which are available on Linux and OS X
 
-0.3.0 (2015-11-30):
+## 0.3.0 (2015-11-30):
 * Use result instead of rresult
 * Split findlib package into errno and errno.unix (depopt ctypes+unix)
 * Add Errno.{Host.to_defns, string_of_defns, defns_of_string}
@@ -53,10 +56,10 @@
 * Add Errno.iter_defns
 * Add Errno_host module in errno findlib package with common Errno.Host.t values
 
-0.2.0 (2015-07-26):
+## 0.2.0 (2015-07-26):
 * Use ctypes >= 0.4.0 with stub generation
 * Separate modules into Unix-dependent and Unix-independent sets
 * Add support for all POSIX 2008 errnos
 
-0.1.0 (2015-07-26):
+## 0.1.0 (2015-07-26):
 * Initial public release
