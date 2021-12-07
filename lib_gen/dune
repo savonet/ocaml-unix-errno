@@ -1,6 +1,6 @@
 (library
   (name errno_bindings)
-  (package unix-errno)
+  (public_name unix-errno.errno_bindings)
   (modules unix_errno_bindings)
   (wrapped false)
   (libraries ctypes)
@@ -24,7 +24,7 @@
 
 (library
   (name errno_types)
-  (package unix-errno)
+  (public_name unix-errno.errno_types)
   (modules unix_errno_types unix_errno_generated)
   (wrapped false)
   (libraries ctypes integers)
@@ -60,7 +60,7 @@
 
 (library
   (name errno_types_detected)
-  (package unix-errno)
+  (public_name unix-errno.errno_types_detected)
   (modules unix_errno_types_detected)
   (flags (:standard -w -9-27))
   (libraries ctypes integers)
