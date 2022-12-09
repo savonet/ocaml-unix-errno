@@ -3,13 +3,13 @@
   (public_name unix-errno.errno_bindings)
   (modules unix_errno_bindings)
   (wrapped false)
-  (libraries ctypes)
+  (libraries ctypes ctypes.stubs)
   )
 
 (executables
   (names unix_errno_stubgen_c unix_errno_stubgen_ml)
   (modules unix_errno_stubgen_c unix_errno_stubgen_ml)
-  (libraries ctypes.stubs errno_bindings)
+  (libraries ctypes ctypes.stubs errno_bindings)
   )
 
 (rule
@@ -27,7 +27,7 @@
   (public_name unix-errno.errno_types)
   (modules unix_errno_types unix_errno_generated)
   (wrapped false)
-  (libraries ctypes integers)
+  (libraries ctypes ctypes.stubs integers)
   )
 
 ; Generate library errno_types_detected using ctypes_stubs

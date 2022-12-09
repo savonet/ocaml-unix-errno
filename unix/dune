@@ -6,6 +6,7 @@
   (wrapped false)
   (foreign_stubs (language c) (names unix_errno_util unix_errno_stubs))
   (libraries
+    ctypes
     ctypes.stubs
     errno
     integers
