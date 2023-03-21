@@ -21,7 +21,6 @@ depends: [
   "alcotest" {with-test}
   "ctypes" {>= "0.7.0"}
   "integers"
-  "result"
 ]
 build: [
   ["dune" "subst"] {dev}
