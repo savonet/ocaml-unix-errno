@@ -360,6 +360,6 @@ val string_of_defns : defns -> string
 
 val defns_of_string : string -> defns
 
-val check_errno : (unit -> 'a) -> ('a, error) Result.result
+val check_errno : (unit -> 'a) -> ('a, error) result
 
 val string_of_error : error -> string

@@ -1,3 +1,9 @@
+## 0.6.2 (2023-03-20)
+* Fix compatibility with future ctype releases
+
+## 0.6.1 (2021-12-13):
+* Remove use of private libraries
+
 ## 0.6.0 (2021-08-19):
 * Port to dune
 

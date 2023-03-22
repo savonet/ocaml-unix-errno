@@ -1485,8 +1485,8 @@ let defns_of_string s =
   read_lines empty_defns s
 
 let check_errno fn =
-  try Result.Ok (fn ())
-  with Error e -> Result.Error e
+  try Ok (fn ())
+  with Error e -> Error e
 
 let string_of_error { errno; call; label } =
    Printf.sprintf "{ errno = [%s]; call = %s; label = %s }"
