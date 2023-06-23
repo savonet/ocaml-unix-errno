@@ -497,318 +497,320 @@ let empty_defns = {
 }
 
 let to_code ~host = let (defns,_) = host in function
-  | E2BIG -> defns.e2big
-  | EACCES -> defns.eacces
-  | EADDRINUSE -> defns.eaddrinuse
-  | EADDRNOTAVAIL -> defns.eaddrnotavail
-  | EAFNOSUPPORT -> defns.eafnosupport
-  | EAGAIN -> defns.eagain
-  | EALREADY -> defns.ealready
-  | EBADF -> defns.ebadf
-  | EBADMSG -> defns.ebadmsg
-  | EBUSY -> defns.ebusy
-  | ECANCELED -> defns.ecanceled
-  | ECHILD -> defns.echild
-  | ECONNABORTED -> defns.econnaborted
-  | ECONNREFUSED -> defns.econnrefused
-  | ECONNRESET -> defns.econnreset
-  | EDEADLK -> defns.edeadlk
-  | EDESTADDRREQ -> defns.edestaddrreq
-  | EDOM -> defns.edom
-  | EDQUOT -> defns.edquot
-  | EEXIST -> defns.eexist
-  | EFAULT -> defns.efault
-  | EFBIG -> defns.efbig
-  | EHOSTDOWN -> defns.ehostdown
-  | EHOSTUNREACH -> defns.ehostunreach
-  | EIDRM -> defns.eidrm
-  | EILSEQ -> defns.eilseq
-  | EINPROGRESS -> defns.einprogress
-  | EINTR -> defns.eintr
-  | EINVAL -> defns.einval
-  | EIO -> defns.eio
-  | EISCONN -> defns.eisconn
-  | EISDIR -> defns.eisdir
-  | ELOOP -> defns.eloop
-  | EMFILE -> defns.emfile
-  | EMLINK -> defns.emlink
-  | EMSGSIZE -> defns.emsgsize
-  | EMULTIHOP -> defns.emultihop
-  | ENAMETOOLONG -> defns.enametoolong
-  | ENETDOWN -> defns.enetdown
-  | ENETRESET -> defns.enetreset
-  | ENETUNREACH -> defns.enetunreach
-  | ENFILE -> defns.enfile
-  | ENOBUFS -> defns.enobufs
-  | ENODEV -> defns.enodev
-  | ENOENT -> defns.enoent
-  | ENOEXEC -> defns.enoexec
-  | ENOLCK -> defns.enolck
-  | ENOLINK -> defns.enolink
-  | ENOMEM -> defns.enomem
-  | ENOMSG -> defns.enomsg
-  | ENOPROTOOPT -> defns.enoprotoopt
-  | ENOSPC -> defns.enospc
-  | ENOSYS -> defns.enosys
-  | ENOTBLK -> defns.enotblk
-  | ENOTCONN -> defns.enotconn
-  | ENOTDIR -> defns.enotdir
-  | ENOTEMPTY -> defns.enotempty
-  | ENOTRECOVERABLE -> defns.enotrecoverable
-  | ENOTSOCK -> defns.enotsock
-  | ENOTSUP -> defns.enotsup
-  | ENOTTY -> defns.enotty
-  | ENXIO -> defns.enxio
-  | EOPNOTSUPP -> defns.eopnotsupp
-  | EOVERFLOW -> defns.eoverflow
-  | EOWNERDEAD -> defns.eownerdead
-  | EPERM -> defns.eperm
-  | EPFNOSUPPORT -> defns.epfnosupport
-  | EPIPE -> defns.epipe
-  | EPROTO -> defns.eproto
-  | EPROTONOSUPPORT -> defns.eprotonosupport
-  | EPROTOTYPE -> defns.eprototype
-  | ERANGE -> defns.erange
-  | EREMOTE -> defns.eremote
-  | EROFS -> defns.erofs
-  | ESHUTDOWN -> defns.eshutdown
-  | ESOCKTNOSUPPORT -> defns.esocktnosupport
-  | ESPIPE -> defns.espipe
-  | ESRCH -> defns.esrch
-  | ESTALE -> defns.estale
-  | ETIMEDOUT -> defns.etimedout
-  | ETOOMANYREFS -> defns.etoomanyrefs
-  | ETXTBSY -> defns.etxtbsy
-  | EUSERS -> defns.eusers
-  | EWOULDBLOCK -> defns.ewouldblock
-  | EXDEV -> defns.exdev
-  | ECHRNG -> defns.echrng
-  | EL2NSYNC -> defns.el2nsync
-  | EL3HLT -> defns.el3hlt
-  | EL3RST -> defns.el3rst
-  | ELNRNG -> defns.elnrng
-  | EUNATCH -> defns.eunatch
-  | ENOCSI -> defns.enocsi
-  | EL2HLT -> defns.el2hlt
-  | EBADE -> defns.ebade
-  | EBADR -> defns.ebadr
-  | EXFULL -> defns.exfull
-  | ENOANO -> defns.enoano
-  | EBADRQC -> defns.ebadrqc
-  | EBADSLT -> defns.ebadslt
-  | EBFONT -> defns.ebfont
-  | ENONET -> defns.enonet
-  | ENOPKG -> defns.enopkg
-  | EADV -> defns.eadv
-  | ESRMNT -> defns.esrmnt
-  | ECOMM -> defns.ecomm
-  | EDOTDOT -> defns.edotdot
-  | ENOTUNIQ -> defns.enotuniq
-  | EBADFD -> defns.ebadfd
-  | EREMCHG -> defns.eremchg
-  | ELIBACC -> defns.elibacc
-  | ELIBBAD -> defns.elibbad
-  | ELIBSCN -> defns.elibscn
-  | ELIBMAX -> defns.elibmax
-  | ELIBEXEC -> defns.elibexec
-  | ERESTART -> defns.erestart
-  | ESTRPIPE -> defns.estrpipe
-  | EUCLEAN -> defns.euclean
-  | ENOTNAM -> defns.enotnam
-  | ENAVAIL -> defns.enavail
-  | EISNAM -> defns.eisnam
-  | EREMOTEIO -> defns.eremoteio
-  | ENOMEDIUM -> defns.enomedium
-  | EMEDIUMTYPE -> defns.emediumtype
-  | ENOKEY -> defns.enokey
-  | EKEYEXPIRED -> defns.ekeyexpired
-  | EKEYREVOKED -> defns.ekeyrevoked
-  | EKEYREJECTED -> defns.ekeyrejected
-  | ERFKILL -> defns.erfkill
-  | EHWPOISON -> defns.ehwpoison
-  | EPWROFF -> defns.epwroff
-  | EDEVERR -> defns.edeverr
-  | EBADEXEC -> defns.ebadexec
-  | EBADARCH -> defns.ebadarch
-  | ESHLIBVERS -> defns.eshlibvers
-  | EBADMACHO -> defns.ebadmacho
-  | ENOPOLICY -> defns.enopolicy
-  | EQFULL -> defns.eqfull
-  | EDOOFUS -> defns.edoofus
-  | ENOTCAPABLE -> defns.enotcapable
-  | ECAPMODE -> defns.ecapmode
-  | EPROCLIM -> defns.eproclim
-  | EBADRPC -> defns.ebadrpc
-  | ERPCMISMATCH -> defns.erpcmismatch
-  | EPROGUNAVAIL -> defns.eprogunavail
-  | EPROGMISMATCH -> defns.eprogmismatch
-  | EPROCUNAVAIL -> defns.eprocunavail
-  | EFTYPE -> defns.eftype
-  | EAUTH -> defns.eauth
-  | ENEEDAUTH -> defns.eneedauth
-  | ENOATTR -> defns.enoattr
-  | ENOSTR -> defns.enostr
-  | ENODATA -> defns.enodata
-  | ETIME -> defns.etime
-  | ENOSR -> defns.enosr
+  | x when x = E2BIG -> defns.e2big
+  | x when x = EACCES -> defns.eacces
+  | x when x = EADDRINUSE -> defns.eaddrinuse
+  | x when x = EADDRNOTAVAIL -> defns.eaddrnotavail
+  | x when x = EAFNOSUPPORT -> defns.eafnosupport
+  | x when x = EAGAIN -> defns.eagain
+  | x when x = EALREADY -> defns.ealready
+  | x when x = EBADF -> defns.ebadf
+  | x when x = EBADMSG -> defns.ebadmsg
+  | x when x = EBUSY -> defns.ebusy
+  | x when x = ECANCELED -> defns.ecanceled
+  | x when x = ECHILD -> defns.echild
+  | x when x = ECONNABORTED -> defns.econnaborted
+  | x when x = ECONNREFUSED -> defns.econnrefused
+  | x when x = ECONNRESET -> defns.econnreset
+  | x when x = EDEADLK -> defns.edeadlk
+  | x when x = EDESTADDRREQ -> defns.edestaddrreq
+  | x when x = EDOM -> defns.edom
+  | x when x = EDQUOT -> defns.edquot
+  | x when x = EEXIST -> defns.eexist
+  | x when x = EFAULT -> defns.efault
+  | x when x = EFBIG -> defns.efbig
+  | x when x = EHOSTDOWN -> defns.ehostdown
+  | x when x = EHOSTUNREACH -> defns.ehostunreach
+  | x when x = EIDRM -> defns.eidrm
+  | x when x = EILSEQ -> defns.eilseq
+  | x when x = EINPROGRESS -> defns.einprogress
+  | x when x = EINTR -> defns.eintr
+  | x when x = EINVAL -> defns.einval
+  | x when x = EIO -> defns.eio
+  | x when x = EISCONN -> defns.eisconn
+  | x when x = EISDIR -> defns.eisdir
+  | x when x = ELOOP -> defns.eloop
+  | x when x = EMFILE -> defns.emfile
+  | x when x = EMLINK -> defns.emlink
+  | x when x = EMSGSIZE -> defns.emsgsize
+  | x when x = EMULTIHOP -> defns.emultihop
+  | x when x = ENAMETOOLONG -> defns.enametoolong
+  | x when x = ENETDOWN -> defns.enetdown
+  | x when x = ENETRESET -> defns.enetreset
+  | x when x = ENETUNREACH -> defns.enetunreach
+  | x when x = ENFILE -> defns.enfile
+  | x when x = ENOBUFS -> defns.enobufs
+  | x when x = ENODEV -> defns.enodev
+  | x when x = ENOENT -> defns.enoent
+  | x when x = ENOEXEC -> defns.enoexec
+  | x when x = ENOLCK -> defns.enolck
+  | x when x = ENOLINK -> defns.enolink
+  | x when x = ENOMEM -> defns.enomem
+  | x when x = ENOMSG -> defns.enomsg
+  | x when x = ENOPROTOOPT -> defns.enoprotoopt
+  | x when x = ENOSPC -> defns.enospc
+  | x when x = ENOSYS -> defns.enosys
+  | x when x = ENOTBLK -> defns.enotblk
+  | x when x = ENOTCONN -> defns.enotconn
+  | x when x = ENOTDIR -> defns.enotdir
+  | x when x = ENOTEMPTY -> defns.enotempty
+  | x when x = ENOTRECOVERABLE -> defns.enotrecoverable
+  | x when x = ENOTSOCK -> defns.enotsock
+  | x when x = ENOTSUP -> defns.enotsup
+  | x when x = ENOTTY -> defns.enotty
+  | x when x = ENXIO -> defns.enxio
+  | x when x = EOPNOTSUPP -> defns.eopnotsupp
+  | x when x = EOVERFLOW -> defns.eoverflow
+  | x when x = EOWNERDEAD -> defns.eownerdead
+  | x when x = EPERM -> defns.eperm
+  | x when x = EPFNOSUPPORT -> defns.epfnosupport
+  | x when x = EPIPE -> defns.epipe
+  | x when x = EPROTO -> defns.eproto
+  | x when x = EPROTONOSUPPORT -> defns.eprotonosupport
+  | x when x = EPROTOTYPE -> defns.eprototype
+  | x when x = ERANGE -> defns.erange
+  | x when x = EREMOTE -> defns.eremote
+  | x when x = EROFS -> defns.erofs
+  | x when x = ESHUTDOWN -> defns.eshutdown
+  | x when x = ESOCKTNOSUPPORT -> defns.esocktnosupport
+  | x when x = ESPIPE -> defns.espipe
+  | x when x = ESRCH -> defns.esrch
+  | x when x = ESTALE -> defns.estale
+  | x when x = ETIMEDOUT -> defns.etimedout
+  | x when x = ETOOMANYREFS -> defns.etoomanyrefs
+  | x when x = ETXTBSY -> defns.etxtbsy
+  | x when x = EUSERS -> defns.eusers
+  | x when x = EWOULDBLOCK -> defns.ewouldblock
+  | x when x = EXDEV -> defns.exdev
+  | x when x = ECHRNG -> defns.echrng
+  | x when x = EL2NSYNC -> defns.el2nsync
+  | x when x = EL3HLT -> defns.el3hlt
+  | x when x = EL3RST -> defns.el3rst
+  | x when x = ELNRNG -> defns.elnrng
+  | x when x = EUNATCH -> defns.eunatch
+  | x when x = ENOCSI -> defns.enocsi
+  | x when x = EL2HLT -> defns.el2hlt
+  | x when x = EBADE -> defns.ebade
+  | x when x = EBADR -> defns.ebadr
+  | x when x = EXFULL -> defns.exfull
+  | x when x = ENOANO -> defns.enoano
+  | x when x = EBADRQC -> defns.ebadrqc
+  | x when x = EBADSLT -> defns.ebadslt
+  | x when x = EBFONT -> defns.ebfont
+  | x when x = ENONET -> defns.enonet
+  | x when x = ENOPKG -> defns.enopkg
+  | x when x = EADV -> defns.eadv
+  | x when x = ESRMNT -> defns.esrmnt
+  | x when x = ECOMM -> defns.ecomm
+  | x when x = EDOTDOT -> defns.edotdot
+  | x when x = ENOTUNIQ -> defns.enotuniq
+  | x when x = EBADFD -> defns.ebadfd
+  | x when x = EREMCHG -> defns.eremchg
+  | x when x = ELIBACC -> defns.elibacc
+  | x when x = ELIBBAD -> defns.elibbad
+  | x when x = ELIBSCN -> defns.elibscn
+  | x when x = ELIBMAX -> defns.elibmax
+  | x when x = ELIBEXEC -> defns.elibexec
+  | x when x = ERESTART -> defns.erestart
+  | x when x = ESTRPIPE -> defns.estrpipe
+  | x when x = EUCLEAN -> defns.euclean
+  | x when x = ENOTNAM -> defns.enotnam
+  | x when x = ENAVAIL -> defns.enavail
+  | x when x = EISNAM -> defns.eisnam
+  | x when x = EREMOTEIO -> defns.eremoteio
+  | x when x = ENOMEDIUM -> defns.enomedium
+  | x when x = EMEDIUMTYPE -> defns.emediumtype
+  | x when x = ENOKEY -> defns.enokey
+  | x when x = EKEYEXPIRED -> defns.ekeyexpired
+  | x when x = EKEYREVOKED -> defns.ekeyrevoked
+  | x when x = EKEYREJECTED -> defns.ekeyrejected
+  | x when x = ERFKILL -> defns.erfkill
+  | x when x = EHWPOISON -> defns.ehwpoison
+  | x when x = EPWROFF -> defns.epwroff
+  | x when x = EDEVERR -> defns.edeverr
+  | x when x = EBADEXEC -> defns.ebadexec
+  | x when x = EBADARCH -> defns.ebadarch
+  | x when x = ESHLIBVERS -> defns.eshlibvers
+  | x when x = EBADMACHO -> defns.ebadmacho
+  | x when x = ENOPOLICY -> defns.enopolicy
+  | x when x = EQFULL -> defns.eqfull
+  | x when x = EDOOFUS -> defns.edoofus
+  | x when x = ENOTCAPABLE -> defns.enotcapable
+  | x when x = ECAPMODE -> defns.ecapmode
+  | x when x = EPROCLIM -> defns.eproclim
+  | x when x = EBADRPC -> defns.ebadrpc
+  | x when x = ERPCMISMATCH -> defns.erpcmismatch
+  | x when x = EPROGUNAVAIL -> defns.eprogunavail
+  | x when x = EPROGMISMATCH -> defns.eprogmismatch
+  | x when x = EPROCUNAVAIL -> defns.eprocunavail
+  | x when x = EFTYPE -> defns.eftype
+  | x when x = EAUTH -> defns.eauth
+  | x when x = ENEEDAUTH -> defns.eneedauth
+  | x when x = ENOATTR -> defns.enoattr
+  | x when x = ENOSTR -> defns.enostr
+  | x when x = ENODATA -> defns.enodata
+  | x when x = ETIME -> defns.etime
+  | x when x = ENOSR -> defns.enosr
   | EUNKNOWNERR x   -> Some x
+  | _ -> assert false
 
 let with_code defns symbol code = match symbol with
-  | E2BIG -> { defns with e2big = code }
-  | EACCES -> { defns with eacces = code }
-  | EADDRINUSE -> { defns with eaddrinuse = code }
-  | EADDRNOTAVAIL -> { defns with eaddrnotavail = code }
-  | EAFNOSUPPORT -> { defns with eafnosupport = code }
-  | EAGAIN -> { defns with eagain = code }
-  | EALREADY -> { defns with ealready = code }
-  | EBADF -> { defns with ebadf = code }
-  | EBADMSG -> { defns with ebadmsg = code }
-  | EBUSY -> { defns with ebusy = code }
-  | ECANCELED -> { defns with ecanceled = code }
-  | ECHILD -> { defns with echild = code }
-  | ECONNABORTED -> { defns with econnaborted = code }
-  | ECONNREFUSED -> { defns with econnrefused = code }
-  | ECONNRESET -> { defns with econnreset = code }
-  | EDEADLK -> { defns with edeadlk = code }
-  | EDESTADDRREQ -> { defns with edestaddrreq = code }
-  | EDOM -> { defns with edom = code }
-  | EDQUOT -> { defns with edquot = code }
-  | EEXIST -> { defns with eexist = code }
-  | EFAULT -> { defns with efault = code }
-  | EFBIG -> { defns with efbig = code }
-  | EHOSTDOWN -> { defns with ehostdown = code }
-  | EHOSTUNREACH -> { defns with ehostunreach = code }
-  | EIDRM -> { defns with eidrm = code }
-  | EILSEQ -> { defns with eilseq = code }
-  | EINPROGRESS -> { defns with einprogress = code }
-  | EINTR -> { defns with eintr = code }
-  | EINVAL -> { defns with einval = code }
-  | EIO -> { defns with eio = code }
-  | EISCONN -> { defns with eisconn = code }
-  | EISDIR -> { defns with eisdir = code }
-  | ELOOP -> { defns with eloop = code }
-  | EMFILE -> { defns with emfile = code }
-  | EMLINK -> { defns with emlink = code }
-  | EMSGSIZE -> { defns with emsgsize = code }
-  | EMULTIHOP -> { defns with emultihop = code }
-  | ENAMETOOLONG -> { defns with enametoolong = code }
-  | ENETDOWN -> { defns with enetdown = code }
-  | ENETRESET -> { defns with enetreset = code }
-  | ENETUNREACH -> { defns with enetunreach = code }
-  | ENFILE -> { defns with enfile = code }
-  | ENOBUFS -> { defns with enobufs = code }
-  | ENODEV -> { defns with enodev = code }
-  | ENOENT -> { defns with enoent = code }
-  | ENOEXEC -> { defns with enoexec = code }
-  | ENOLCK -> { defns with enolck = code }
-  | ENOLINK -> { defns with enolink = code }
-  | ENOMEM -> { defns with enomem = code }
-  | ENOMSG -> { defns with enomsg = code }
-  | ENOPROTOOPT -> { defns with enoprotoopt = code }
-  | ENOSPC -> { defns with enospc = code }
-  | ENOSYS -> { defns with enosys = code }
-  | ENOTBLK -> { defns with enotblk = code }
-  | ENOTCONN -> { defns with enotconn = code }
-  | ENOTDIR -> { defns with enotdir = code }
-  | ENOTEMPTY -> { defns with enotempty = code }
-  | ENOTRECOVERABLE -> { defns with enotrecoverable = code }
-  | ENOTSOCK -> { defns with enotsock = code }
-  | ENOTSUP -> { defns with enotsup = code }
-  | ENOTTY -> { defns with enotty = code }
-  | ENXIO -> { defns with enxio = code }
-  | EOPNOTSUPP -> { defns with eopnotsupp = code }
-  | EOVERFLOW -> { defns with eoverflow = code }
-  | EOWNERDEAD -> { defns with eownerdead = code }
-  | EPERM -> { defns with eperm = code }
-  | EPFNOSUPPORT -> { defns with epfnosupport = code }
-  | EPIPE -> { defns with epipe = code }
-  | EPROTO -> { defns with eproto = code }
-  | EPROTONOSUPPORT -> { defns with eprotonosupport = code }
-  | EPROTOTYPE -> { defns with eprototype = code }
-  | ERANGE -> { defns with erange = code }
-  | EREMOTE -> { defns with eremote = code }
-  | EROFS -> { defns with erofs = code }
-  | ESHUTDOWN -> { defns with eshutdown = code }
-  | ESOCKTNOSUPPORT -> { defns with esocktnosupport = code }
-  | ESPIPE -> { defns with espipe = code }
-  | ESRCH -> { defns with esrch = code }
-  | ESTALE -> { defns with estale = code }
-  | ETIMEDOUT -> { defns with etimedout = code }
-  | ETOOMANYREFS -> { defns with etoomanyrefs = code }
-  | ETXTBSY -> { defns with etxtbsy = code }
-  | EUSERS -> { defns with eusers = code }
-  | EWOULDBLOCK -> { defns with ewouldblock = code }
-  | EXDEV -> { defns with exdev = code }
-  | ECHRNG -> { defns with echrng = code }
-  | EL2NSYNC -> { defns with el2nsync = code }
-  | EL3HLT -> { defns with el3hlt = code }
-  | EL3RST -> { defns with el3rst = code }
-  | ELNRNG -> { defns with elnrng = code }
-  | EUNATCH -> { defns with eunatch = code }
-  | ENOCSI -> { defns with enocsi = code }
-  | EL2HLT -> { defns with el2hlt = code }
-  | EBADE -> { defns with ebade = code }
-  | EBADR -> { defns with ebadr = code }
-  | EXFULL -> { defns with exfull = code }
-  | ENOANO -> { defns with enoano = code }
-  | EBADRQC -> { defns with ebadrqc = code }
-  | EBADSLT -> { defns with ebadslt = code }
-  | EBFONT -> { defns with ebfont = code }
-  | ENONET -> { defns with enonet = code }
-  | ENOPKG -> { defns with enopkg = code }
-  | EADV -> { defns with eadv = code }
-  | ESRMNT -> { defns with esrmnt = code }
-  | ECOMM -> { defns with ecomm = code }
-  | EDOTDOT -> { defns with edotdot = code }
-  | ENOTUNIQ -> { defns with enotuniq = code }
-  | EBADFD -> { defns with ebadfd = code }
-  | EREMCHG -> { defns with eremchg = code }
-  | ELIBACC -> { defns with elibacc = code }
-  | ELIBBAD -> { defns with elibbad = code }
-  | ELIBSCN -> { defns with elibscn = code }
-  | ELIBMAX -> { defns with elibmax = code }
-  | ELIBEXEC -> { defns with elibexec = code }
-  | ERESTART -> { defns with erestart = code }
-  | ESTRPIPE -> { defns with estrpipe = code }
-  | EUCLEAN -> { defns with euclean = code }
-  | ENOTNAM -> { defns with enotnam = code }
-  | ENAVAIL -> { defns with enavail = code }
-  | EISNAM -> { defns with eisnam = code }
-  | EREMOTEIO -> { defns with eremoteio = code }
-  | ENOMEDIUM -> { defns with enomedium = code }
-  | EMEDIUMTYPE -> { defns with emediumtype = code }
-  | ENOKEY -> { defns with enokey = code }
-  | EKEYEXPIRED -> { defns with ekeyexpired = code }
-  | EKEYREVOKED -> { defns with ekeyrevoked = code }
-  | EKEYREJECTED -> { defns with ekeyrejected = code }
-  | ERFKILL -> { defns with erfkill = code }
-  | EHWPOISON -> { defns with ehwpoison = code }
-  | EPWROFF -> { defns with epwroff = code }
-  | EDEVERR -> { defns with edeverr = code }
-  | EBADEXEC -> { defns with ebadexec = code }
-  | EBADARCH -> { defns with ebadarch = code }
-  | ESHLIBVERS -> { defns with eshlibvers = code }
-  | EBADMACHO -> { defns with ebadmacho = code }
-  | ENOPOLICY -> { defns with enopolicy = code }
-  | EQFULL -> { defns with eqfull = code }
-  | EDOOFUS -> { defns with edoofus = code }
-  | ENOTCAPABLE -> { defns with enotcapable = code }
-  | ECAPMODE -> { defns with ecapmode = code }
-  | EPROCLIM -> { defns with eproclim = code }
-  | EBADRPC -> { defns with ebadrpc = code }
-  | ERPCMISMATCH -> { defns with erpcmismatch = code }
-  | EPROGUNAVAIL -> { defns with eprogunavail = code }
-  | EPROGMISMATCH -> { defns with eprogmismatch = code }
-  | EPROCUNAVAIL -> { defns with eprocunavail = code }
-  | EFTYPE -> { defns with eftype = code }
-  | EAUTH -> { defns with eauth = code }
-  | ENEEDAUTH -> { defns with eneedauth = code }
-  | ENOATTR -> { defns with enoattr = code }
-  | ENOSTR -> { defns with enostr = code }
-  | ENODATA -> { defns with enodata = code }
-  | ETIME -> { defns with etime = code }
-  | ENOSR -> { defns with enosr = code }
+  | x when x = E2BIG -> { defns with e2big = code }
+  | x when x = EACCES -> { defns with eacces = code }
+  | x when x = EADDRINUSE -> { defns with eaddrinuse = code }
+  | x when x = EADDRNOTAVAIL -> { defns with eaddrnotavail = code }
+  | x when x = EAFNOSUPPORT -> { defns with eafnosupport = code }
+  | x when x = EAGAIN -> { defns with eagain = code }
+  | x when x = EALREADY -> { defns with ealready = code }
+  | x when x = EBADF -> { defns with ebadf = code }
+  | x when x = EBADMSG -> { defns with ebadmsg = code }
+  | x when x = EBUSY -> { defns with ebusy = code }
+  | x when x = ECANCELED -> { defns with ecanceled = code }
+  | x when x = ECHILD -> { defns with echild = code }
+  | x when x = ECONNABORTED -> { defns with econnaborted = code }
+  | x when x = ECONNREFUSED -> { defns with econnrefused = code }
+  | x when x = ECONNRESET -> { defns with econnreset = code }
+  | x when x = EDEADLK -> { defns with edeadlk = code }
+  | x when x = EDESTADDRREQ -> { defns with edestaddrreq = code }
+  | x when x = EDOM -> { defns with edom = code }
+  | x when x = EDQUOT -> { defns with edquot = code }
+  | x when x = EEXIST -> { defns with eexist = code }
+  | x when x = EFAULT -> { defns with efault = code }
+  | x when x = EFBIG -> { defns with efbig = code }
+  | x when x = EHOSTDOWN -> { defns with ehostdown = code }
+  | x when x = EHOSTUNREACH -> { defns with ehostunreach = code }
+  | x when x = EIDRM -> { defns with eidrm = code }
+  | x when x = EILSEQ -> { defns with eilseq = code }
+  | x when x = EINPROGRESS -> { defns with einprogress = code }
+  | x when x = EINTR -> { defns with eintr = code }
+  | x when x = EINVAL -> { defns with einval = code }
+  | x when x = EIO -> { defns with eio = code }
+  | x when x = EISCONN -> { defns with eisconn = code }
+  | x when x = EISDIR -> { defns with eisdir = code }
+  | x when x = ELOOP -> { defns with eloop = code }
+  | x when x = EMFILE -> { defns with emfile = code }
+  | x when x = EMLINK -> { defns with emlink = code }
+  | x when x = EMSGSIZE -> { defns with emsgsize = code }
+  | x when x = EMULTIHOP -> { defns with emultihop = code }
+  | x when x = ENAMETOOLONG -> { defns with enametoolong = code }
+  | x when x = ENETDOWN -> { defns with enetdown = code }
+  | x when x = ENETRESET -> { defns with enetreset = code }
+  | x when x = ENETUNREACH -> { defns with enetunreach = code }
+  | x when x = ENFILE -> { defns with enfile = code }
+  | x when x = ENOBUFS -> { defns with enobufs = code }
+  | x when x = ENODEV -> { defns with enodev = code }
+  | x when x = ENOENT -> { defns with enoent = code }
+  | x when x = ENOEXEC -> { defns with enoexec = code }
+  | x when x = ENOLCK -> { defns with enolck = code }
+  | x when x = ENOLINK -> { defns with enolink = code }
+  | x when x = ENOMEM -> { defns with enomem = code }
+  | x when x = ENOMSG -> { defns with enomsg = code }
+  | x when x = ENOPROTOOPT -> { defns with enoprotoopt = code }
+  | x when x = ENOSPC -> { defns with enospc = code }
+  | x when x = ENOSYS -> { defns with enosys = code }
+  | x when x = ENOTBLK -> { defns with enotblk = code }
+  | x when x = ENOTCONN -> { defns with enotconn = code }
+  | x when x = ENOTDIR -> { defns with enotdir = code }
+  | x when x = ENOTEMPTY -> { defns with enotempty = code }
+  | x when x = ENOTRECOVERABLE -> { defns with enotrecoverable = code }
+  | x when x = ENOTSOCK -> { defns with enotsock = code }
+  | x when x = ENOTSUP -> { defns with enotsup = code }
+  | x when x = ENOTTY -> { defns with enotty = code }
+  | x when x = ENXIO -> { defns with enxio = code }
+  | x when x = EOPNOTSUPP -> { defns with eopnotsupp = code }
+  | x when x = EOVERFLOW -> { defns with eoverflow = code }
+  | x when x = EOWNERDEAD -> { defns with eownerdead = code }
+  | x when x = EPERM -> { defns with eperm = code }
+  | x when x = EPFNOSUPPORT -> { defns with epfnosupport = code }
+  | x when x = EPIPE -> { defns with epipe = code }
+  | x when x = EPROTO -> { defns with eproto = code }
+  | x when x = EPROTONOSUPPORT -> { defns with eprotonosupport = code }
+  | x when x = EPROTOTYPE -> { defns with eprototype = code }
+  | x when x = ERANGE -> { defns with erange = code }
+  | x when x = EREMOTE -> { defns with eremote = code }
+  | x when x = EROFS -> { defns with erofs = code }
+  | x when x = ESHUTDOWN -> { defns with eshutdown = code }
+  | x when x = ESOCKTNOSUPPORT -> { defns with esocktnosupport = code }
+  | x when x = ESPIPE -> { defns with espipe = code }
+  | x when x = ESRCH -> { defns with esrch = code }
+  | x when x = ESTALE -> { defns with estale = code }
+  | x when x = ETIMEDOUT -> { defns with etimedout = code }
+  | x when x = ETOOMANYREFS -> { defns with etoomanyrefs = code }
+  | x when x = ETXTBSY -> { defns with etxtbsy = code }
+  | x when x = EUSERS -> { defns with eusers = code }
+  | x when x = EWOULDBLOCK -> { defns with ewouldblock = code }
+  | x when x = EXDEV -> { defns with exdev = code }
+  | x when x = ECHRNG -> { defns with echrng = code }
+  | x when x = EL2NSYNC -> { defns with el2nsync = code }
+  | x when x = EL3HLT -> { defns with el3hlt = code }
+  | x when x = EL3RST -> { defns with el3rst = code }
+  | x when x = ELNRNG -> { defns with elnrng = code }
+  | x when x = EUNATCH -> { defns with eunatch = code }
+  | x when x = ENOCSI -> { defns with enocsi = code }
+  | x when x = EL2HLT -> { defns with el2hlt = code }
+  | x when x = EBADE -> { defns with ebade = code }
+  | x when x = EBADR -> { defns with ebadr = code }
+  | x when x = EXFULL -> { defns with exfull = code }
+  | x when x = ENOANO -> { defns with enoano = code }
+  | x when x = EBADRQC -> { defns with ebadrqc = code }
+  | x when x = EBADSLT -> { defns with ebadslt = code }
+  | x when x = EBFONT -> { defns with ebfont = code }
+  | x when x = ENONET -> { defns with enonet = code }
+  | x when x = ENOPKG -> { defns with enopkg = code }
+  | x when x = EADV -> { defns with eadv = code }
+  | x when x = ESRMNT -> { defns with esrmnt = code }
+  | x when x = ECOMM -> { defns with ecomm = code }
+  | x when x = EDOTDOT -> { defns with edotdot = code }
+  | x when x = ENOTUNIQ -> { defns with enotuniq = code }
+  | x when x = EBADFD -> { defns with ebadfd = code }
+  | x when x = EREMCHG -> { defns with eremchg = code }
+  | x when x = ELIBACC -> { defns with elibacc = code }
+  | x when x = ELIBBAD -> { defns with elibbad = code }
+  | x when x = ELIBSCN -> { defns with elibscn = code }
+  | x when x = ELIBMAX -> { defns with elibmax = code }
+  | x when x = ELIBEXEC -> { defns with elibexec = code }
+  | x when x = ERESTART -> { defns with erestart = code }
+  | x when x = ESTRPIPE -> { defns with estrpipe = code }
+  | x when x = EUCLEAN -> { defns with euclean = code }
+  | x when x = ENOTNAM -> { defns with enotnam = code }
+  | x when x = ENAVAIL -> { defns with enavail = code }
+  | x when x = EISNAM -> { defns with eisnam = code }
+  | x when x = EREMOTEIO -> { defns with eremoteio = code }
+  | x when x = ENOMEDIUM -> { defns with enomedium = code }
+  | x when x = EMEDIUMTYPE -> { defns with emediumtype = code }
+  | x when x = ENOKEY -> { defns with enokey = code }
+  | x when x = EKEYEXPIRED -> { defns with ekeyexpired = code }
+  | x when x = EKEYREVOKED -> { defns with ekeyrevoked = code }
+  | x when x = EKEYREJECTED -> { defns with ekeyrejected = code }
+  | x when x = ERFKILL -> { defns with erfkill = code }
+  | x when x = EHWPOISON -> { defns with ehwpoison = code }
+  | x when x = EPWROFF -> { defns with epwroff = code }
+  | x when x = EDEVERR -> { defns with edeverr = code }
+  | x when x = EBADEXEC -> { defns with ebadexec = code }
+  | x when x = EBADARCH -> { defns with ebadarch = code }
+  | x when x = ESHLIBVERS -> { defns with eshlibvers = code }
+  | x when x = EBADMACHO -> { defns with ebadmacho = code }
+  | x when x = ENOPOLICY -> { defns with enopolicy = code }
+  | x when x = EQFULL -> { defns with eqfull = code }
+  | x when x = EDOOFUS -> { defns with edoofus = code }
+  | x when x = ENOTCAPABLE -> { defns with enotcapable = code }
+  | x when x = ECAPMODE -> { defns with ecapmode = code }
+  | x when x = EPROCLIM -> { defns with eproclim = code }
+  | x when x = EBADRPC -> { defns with ebadrpc = code }
+  | x when x = ERPCMISMATCH -> { defns with erpcmismatch = code }
+  | x when x = EPROGUNAVAIL -> { defns with eprogunavail = code }
+  | x when x = EPROGMISMATCH -> { defns with eprogmismatch = code }
+  | x when x = EPROCUNAVAIL -> { defns with eprocunavail = code }
+  | x when x = EFTYPE -> { defns with eftype = code }
+  | x when x = EAUTH -> { defns with eauth = code }
+  | x when x = ENEEDAUTH -> { defns with eneedauth = code }
+  | x when x = ENOATTR -> { defns with enoattr = code }
+  | x when x = ENOSTR -> { defns with enostr = code }
+  | x when x = ENODATA -> { defns with enodata = code }
+  | x when x = ETIME -> { defns with etime = code }
+  | x when x = ENOSR -> { defns with enosr = code }
   | EUNKNOWNERR _ -> defns
+  | _ -> assert false
 
 let of_code ~host code =
   let (_,index) = host in
@@ -817,161 +819,162 @@ let of_code ~host code =
   | errnos -> errnos
 
 let to_string = function
-  | E2BIG -> "E2BIG"
-  | EACCES -> "EACCES"
-  | EADDRINUSE -> "EADDRINUSE"
-  | EADDRNOTAVAIL -> "EADDRNOTAVAIL"
-  | EAFNOSUPPORT -> "EAFNOSUPPORT"
-  | EAGAIN -> "EAGAIN"
-  | EALREADY -> "EALREADY"
-  | EBADF -> "EBADF"
-  | EBADMSG -> "EBADMSG"
-  | EBUSY -> "EBUSY"
-  | ECANCELED -> "ECANCELED"
-  | ECHILD -> "ECHILD"
-  | ECONNABORTED -> "ECONNABORTED"
-  | ECONNREFUSED -> "ECONNREFUSED"
-  | ECONNRESET -> "ECONNRESET"
-  | EDEADLK -> "EDEADLK"
-  | EDESTADDRREQ -> "EDESTADDRREQ"
-  | EDOM -> "EDOM"
-  | EDQUOT -> "EDQUOT"
-  | EEXIST -> "EEXIST"
-  | EFAULT -> "EFAULT"
-  | EFBIG -> "EFBIG"
-  | EHOSTDOWN -> "EHOSTDOWN"
-  | EHOSTUNREACH -> "EHOSTUNREACH"
-  | EIDRM -> "EIDRM"
-  | EILSEQ -> "EILSEQ"
-  | EINPROGRESS -> "EINPROGRESS"
-  | EINTR -> "EINTR"
-  | EINVAL -> "EINVAL"
-  | EIO -> "EIO"
-  | EISCONN -> "EISCONN"
-  | EISDIR -> "EISDIR"
-  | ELOOP -> "ELOOP"
-  | EMFILE -> "EMFILE"
-  | EMLINK -> "EMLINK"
-  | EMSGSIZE -> "EMSGSIZE"
-  | EMULTIHOP -> "EMULTIHOP"
-  | ENAMETOOLONG -> "ENAMETOOLONG"
-  | ENETDOWN -> "ENETDOWN"
-  | ENETRESET -> "ENETRESET"
-  | ENETUNREACH -> "ENETUNREACH"
-  | ENFILE -> "ENFILE"
-  | ENOBUFS -> "ENOBUFS"
-  | ENODEV -> "ENODEV"
-  | ENOENT -> "ENOENT"
-  | ENOEXEC -> "ENOEXEC"
-  | ENOLCK -> "ENOLCK"
-  | ENOLINK -> "ENOLINK"
-  | ENOMEM -> "ENOMEM"
-  | ENOMSG -> "ENOMSG"
-  | ENOPROTOOPT -> "ENOPROTOOPT"
-  | ENOSPC -> "ENOSPC"
-  | ENOSYS -> "ENOSYS"
-  | ENOTBLK -> "ENOTBLK"
-  | ENOTCONN -> "ENOTCONN"
-  | ENOTDIR -> "ENOTDIR"
-  | ENOTEMPTY -> "ENOTEMPTY"
-  | ENOTRECOVERABLE -> "ENOTRECOVERABLE"
-  | ENOTSOCK -> "ENOTSOCK"
-  | ENOTSUP -> "ENOTSUP"
-  | ENOTTY -> "ENOTTY"
-  | ENXIO -> "ENXIO"
-  | EOPNOTSUPP -> "EOPNOTSUPP"
-  | EOVERFLOW -> "EOVERFLOW"
-  | EOWNERDEAD -> "EOWNERDEAD"
-  | EPERM -> "EPERM"
-  | EPFNOSUPPORT -> "EPFNOSUPPORT"
-  | EPIPE -> "EPIPE"
-  | EPROTO -> "EPROTO"
-  | EPROTONOSUPPORT -> "EPROTONOSUPPORT"
-  | EPROTOTYPE -> "EPROTOTYPE"
-  | ERANGE -> "ERANGE"
-  | EREMOTE -> "EREMOTE"
-  | EROFS -> "EROFS"
-  | ESHUTDOWN -> "ESHUTDOWN"
-  | ESOCKTNOSUPPORT -> "ESOCKTNOSUPPORT"
-  | ESPIPE -> "ESPIPE"
-  | ESRCH -> "ESRCH"
-  | ESTALE -> "ESTALE"
-  | ETIMEDOUT -> "ETIMEDOUT"
-  | ETOOMANYREFS -> "ETOOMANYREFS"
-  | ETXTBSY -> "ETXTBSY"
-  | EUSERS -> "EUSERS"
-  | EWOULDBLOCK -> "EWOULDBLOCK"
-  | EXDEV -> "EXDEV"
-  | ECHRNG -> "ECHRNG"
-  | EL2NSYNC -> "EL2NSYNC"
-  | EL3HLT -> "EL3HLT"
-  | EL3RST -> "EL3RST"
-  | ELNRNG -> "ELNRNG"
-  | EUNATCH -> "EUNATCH"
-  | ENOCSI -> "ENOCSI"
-  | EL2HLT -> "EL2HLT"
-  | EBADE -> "EBADE"
-  | EBADR -> "EBADR"
-  | EXFULL -> "EXFULL"
-  | ENOANO -> "ENOANO"
-  | EBADRQC -> "EBADRQC"
-  | EBADSLT -> "EBADSLT"
-  | EBFONT -> "EBFONT"
-  | ENONET -> "ENONET"
-  | ENOPKG -> "ENOPKG"
-  | EADV -> "EADV"
-  | ESRMNT -> "ESRMNT"
-  | ECOMM -> "ECOMM"
-  | EDOTDOT -> "EDOTDOT"
-  | ENOTUNIQ -> "ENOTUNIQ"
-  | EBADFD -> "EBADFD"
-  | EREMCHG -> "EREMCHG"
-  | ELIBACC -> "ELIBACC"
-  | ELIBBAD -> "ELIBBAD"
-  | ELIBSCN -> "ELIBSCN"
-  | ELIBMAX -> "ELIBMAX"
-  | ELIBEXEC -> "ELIBEXEC"
-  | ERESTART -> "ERESTART"
-  | ESTRPIPE -> "ESTRPIPE"
-  | EUCLEAN -> "EUCLEAN"
-  | ENOTNAM -> "ENOTNAM"
-  | ENAVAIL -> "ENAVAIL"
-  | EISNAM -> "EISNAM"
-  | EREMOTEIO -> "EREMOTEIO"
-  | ENOMEDIUM -> "ENOMEDIUM"
-  | EMEDIUMTYPE -> "EMEDIUMTYPE"
-  | ENOKEY -> "ENOKEY"
-  | EKEYEXPIRED -> "EKEYEXPIRED"
-  | EKEYREVOKED -> "EKEYREVOKED"
-  | EKEYREJECTED -> "EKEYREJECTED"
-  | ERFKILL -> "ERFKILL"
-  | EHWPOISON -> "EHWPOISON"
-  | EPWROFF -> "EPWROFF"
-  | EDEVERR -> "EDEVERR"
-  | EBADEXEC -> "EBADEXEC"
-  | EBADARCH -> "EBADARCH"
-  | ESHLIBVERS -> "ESHLIBVERS"
-  | EBADMACHO -> "EBADMACHO"
-  | ENOPOLICY -> "ENOPOLICY"
-  | EQFULL -> "EQFULL"
-  | EDOOFUS -> "EDOOFUS"
-  | ENOTCAPABLE -> "ENOTCAPABLE"
-  | ECAPMODE -> "ECAPMODE"
-  | EPROCLIM -> "EPROCLIM"
-  | EBADRPC -> "EBADRPC"
-  | ERPCMISMATCH -> "ERPCMISMATCH"
-  | EPROGUNAVAIL -> "EPROGUNAVAIL"
-  | EPROGMISMATCH -> "EPROGMISMATCH"
-  | EPROCUNAVAIL -> "EPROCUNAVAIL"
-  | EFTYPE -> "EFTYPE"
-  | EAUTH -> "EAUTH"
-  | ENEEDAUTH -> "ENEEDAUTH"
-  | ENOATTR -> "ENOATTR"
-  | ENOSTR -> "ENOSTR"
-  | ENODATA -> "ENODATA"
-  | ETIME -> "ETIME"
-  | ENOSR -> "ENOSR"
+  | x when x = E2BIG -> "E2BIG"
+  | x when x = EACCES -> "EACCES"
+  | x when x = EADDRINUSE -> "EADDRINUSE"
+  | x when x = EADDRNOTAVAIL -> "EADDRNOTAVAIL"
+  | x when x = EAFNOSUPPORT -> "EAFNOSUPPORT"
+  | x when x = EAGAIN -> "EAGAIN"
+  | x when x = EALREADY -> "EALREADY"
+  | x when x = EBADF -> "EBADF"
+  | x when x = EBADMSG -> "EBADMSG"
+  | x when x = EBUSY -> "EBUSY"
+  | x when x = ECANCELED -> "ECANCELED"
+  | x when x = ECHILD -> "ECHILD"
+  | x when x = ECONNABORTED -> "ECONNABORTED"
+  | x when x = ECONNREFUSED -> "ECONNREFUSED"
+  | x when x = ECONNRESET -> "ECONNRESET"
+  | x when x = EDEADLK -> "EDEADLK"
+  | x when x = EDESTADDRREQ -> "EDESTADDRREQ"
+  | x when x = EDOM -> "EDOM"
+  | x when x = EDQUOT -> "EDQUOT"
+  | x when x = EEXIST -> "EEXIST"
+  | x when x = EFAULT -> "EFAULT"
+  | x when x = EFBIG -> "EFBIG"
+  | x when x = EHOSTDOWN -> "EHOSTDOWN"
+  | x when x = EHOSTUNREACH -> "EHOSTUNREACH"
+  | x when x = EIDRM -> "EIDRM"
+  | x when x = EILSEQ -> "EILSEQ"
+  | x when x = EINPROGRESS -> "EINPROGRESS"
+  | x when x = EINTR -> "EINTR"
+  | x when x = EINVAL -> "EINVAL"
+  | x when x = EIO -> "EIO"
+  | x when x = EISCONN -> "EISCONN"
+  | x when x = EISDIR -> "EISDIR"
+  | x when x = ELOOP -> "ELOOP"
+  | x when x = EMFILE -> "EMFILE"
+  | x when x = EMLINK -> "EMLINK"
+  | x when x = EMSGSIZE -> "EMSGSIZE"
+  | x when x = EMULTIHOP -> "EMULTIHOP"
+  | x when x = ENAMETOOLONG -> "ENAMETOOLONG"
+  | x when x = ENETDOWN -> "ENETDOWN"
+  | x when x = ENETRESET -> "ENETRESET"
+  | x when x = ENETUNREACH -> "ENETUNREACH"
+  | x when x = ENFILE -> "ENFILE"
+  | x when x = ENOBUFS -> "ENOBUFS"
+  | x when x = ENODEV -> "ENODEV"
+  | x when x = ENOENT -> "ENOENT"
+  | x when x = ENOEXEC -> "ENOEXEC"
+  | x when x = ENOLCK -> "ENOLCK"
+  | x when x = ENOLINK -> "ENOLINK"
+  | x when x = ENOMEM -> "ENOMEM"
+  | x when x = ENOMSG -> "ENOMSG"
+  | x when x = ENOPROTOOPT -> "ENOPROTOOPT"
+  | x when x = ENOSPC -> "ENOSPC"
+  | x when x = ENOSYS -> "ENOSYS"
+  | x when x = ENOTBLK -> "ENOTBLK"
+  | x when x = ENOTCONN -> "ENOTCONN"
+  | x when x = ENOTDIR -> "ENOTDIR"
+  | x when x = ENOTEMPTY -> "ENOTEMPTY"
+  | x when x = ENOTRECOVERABLE -> "ENOTRECOVERABLE"
+  | x when x = ENOTSOCK -> "ENOTSOCK"
+  | x when x = ENOTSUP -> "ENOTSUP"
+  | x when x = ENOTTY -> "ENOTTY"
+  | x when x = ENXIO -> "ENXIO"
+  | x when x = EOPNOTSUPP -> "EOPNOTSUPP"
+  | x when x = EOVERFLOW -> "EOVERFLOW"
+  | x when x = EOWNERDEAD -> "EOWNERDEAD"
+  | x when x = EPERM -> "EPERM"
+  | x when x = EPFNOSUPPORT -> "EPFNOSUPPORT"
+  | x when x = EPIPE -> "EPIPE"
+  | x when x = EPROTO -> "EPROTO"
+  | x when x = EPROTONOSUPPORT -> "EPROTONOSUPPORT"
+  | x when x = EPROTOTYPE -> "EPROTOTYPE"
+  | x when x = ERANGE -> "ERANGE"
+  | x when x = EREMOTE -> "EREMOTE"
+  | x when x = EROFS -> "EROFS"
+  | x when x = ESHUTDOWN -> "ESHUTDOWN"
+  | x when x = ESOCKTNOSUPPORT -> "ESOCKTNOSUPPORT"
+  | x when x = ESPIPE -> "ESPIPE"
+  | x when x = ESRCH -> "ESRCH"
+  | x when x = ESTALE -> "ESTALE"
+  | x when x = ETIMEDOUT -> "ETIMEDOUT"
+  | x when x = ETOOMANYREFS -> "ETOOMANYREFS"
+  | x when x = ETXTBSY -> "ETXTBSY"
+  | x when x = EUSERS -> "EUSERS"
+  | x when x = EWOULDBLOCK -> "EWOULDBLOCK"
+  | x when x = EXDEV -> "EXDEV"
+  | x when x = ECHRNG -> "ECHRNG"
+  | x when x = EL2NSYNC -> "EL2NSYNC"
+  | x when x = EL3HLT -> "EL3HLT"
+  | x when x = EL3RST -> "EL3RST"
+  | x when x = ELNRNG -> "ELNRNG"
+  | x when x = EUNATCH -> "EUNATCH"
+  | x when x = ENOCSI -> "ENOCSI"
+  | x when x = EL2HLT -> "EL2HLT"
+  | x when x = EBADE -> "EBADE"
+  | x when x = EBADR -> "EBADR"
+  | x when x = EXFULL -> "EXFULL"
+  | x when x = ENOANO -> "ENOANO"
+  | x when x = EBADRQC -> "EBADRQC"
+  | x when x = EBADSLT -> "EBADSLT"
+  | x when x = EBFONT -> "EBFONT"
+  | x when x = ENONET -> "ENONET"
+  | x when x = ENOPKG -> "ENOPKG"
+  | x when x = EADV -> "EADV"
+  | x when x = ESRMNT -> "ESRMNT"
+  | x when x = ECOMM -> "ECOMM"
+  | x when x = EDOTDOT -> "EDOTDOT"
+  | x when x = ENOTUNIQ -> "ENOTUNIQ"
+  | x when x = EBADFD -> "EBADFD"
+  | x when x = EREMCHG -> "EREMCHG"
+  | x when x = ELIBACC -> "ELIBACC"
+  | x when x = ELIBBAD -> "ELIBBAD"
+  | x when x = ELIBSCN -> "ELIBSCN"
+  | x when x = ELIBMAX -> "ELIBMAX"
+  | x when x = ELIBEXEC -> "ELIBEXEC"
+  | x when x = ERESTART -> "ERESTART"
+  | x when x = ESTRPIPE -> "ESTRPIPE"
+  | x when x = EUCLEAN -> "EUCLEAN"
+  | x when x = ENOTNAM -> "ENOTNAM"
+  | x when x = ENAVAIL -> "ENAVAIL"
+  | x when x = EISNAM -> "EISNAM"
+  | x when x = EREMOTEIO -> "EREMOTEIO"
+  | x when x = ENOMEDIUM -> "ENOMEDIUM"
+  | x when x = EMEDIUMTYPE -> "EMEDIUMTYPE"
+  | x when x = ENOKEY -> "ENOKEY"
+  | x when x = EKEYEXPIRED -> "EKEYEXPIRED"
+  | x when x = EKEYREVOKED -> "EKEYREVOKED"
+  | x when x = EKEYREJECTED -> "EKEYREJECTED"
+  | x when x = ERFKILL -> "ERFKILL"
+  | x when x = EHWPOISON -> "EHWPOISON"
+  | x when x = EPWROFF -> "EPWROFF"
+  | x when x = EDEVERR -> "EDEVERR"
+  | x when x = EBADEXEC -> "EBADEXEC"
+  | x when x = EBADARCH -> "EBADARCH"
+  | x when x = ESHLIBVERS -> "ESHLIBVERS"
+  | x when x = EBADMACHO -> "EBADMACHO"
+  | x when x = ENOPOLICY -> "ENOPOLICY"
+  | x when x = EQFULL -> "EQFULL"
+  | x when x = EDOOFUS -> "EDOOFUS"
+  | x when x = ENOTCAPABLE -> "ENOTCAPABLE"
+  | x when x = ECAPMODE -> "ECAPMODE"
+  | x when x = EPROCLIM -> "EPROCLIM"
+  | x when x = EBADRPC -> "EBADRPC"
+  | x when x = ERPCMISMATCH -> "ERPCMISMATCH"
+  | x when x = EPROGUNAVAIL -> "EPROGUNAVAIL"
+  | x when x = EPROGMISMATCH -> "EPROGMISMATCH"
+  | x when x = EPROCUNAVAIL -> "EPROCUNAVAIL"
+  | x when x = EFTYPE -> "EFTYPE"
+  | x when x = EAUTH -> "EAUTH"
+  | x when x = ENEEDAUTH -> "ENEEDAUTH"
+  | x when x = ENOATTR -> "ENOATTR"
+  | x when x = ENOSTR -> "ENOSTR"
+  | x when x = ENODATA -> "ENODATA"
+  | x when x = ETIME -> "ETIME"
+  | x when x = ENOSR -> "ENOSR"
   | EUNKNOWNERR x   -> "EUNKNOWNERR_"^(Signed.SInt.to_string x)
+  | _ -> assert false
 
 let of_string = function
   | "E2BIG" -> Some E2BIG
